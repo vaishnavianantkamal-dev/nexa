@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function SEO({
@@ -20,7 +19,7 @@ export default function SEO({
   const finalDescription = description || defaultDescription;
   const finalKeywords = keywords || defaultKeywords;
   const finalUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const finalImage = image || `${siteUrl}/logo.svg`;
+  const finalImage = image || `${siteUrl}/Nexaports_fav.png`;
 
   return (
     <Helmet defer={false}>
@@ -54,7 +53,7 @@ export default function SEO({
           "@type": "Organization",
           name: "Nexaports Global",
           url: siteUrl,
-          logo: `${siteUrl}/logo.svg`,
+          logo: `${siteUrl}/Nexaports_fav.png`,
           email: "Info@nexaportsglobal.com",
           telephone: "+91-9272008648",
           address: {
