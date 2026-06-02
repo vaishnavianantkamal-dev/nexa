@@ -171,7 +171,7 @@ export default function Navbar() {
               {/* CTA Message - Center (Hidden on small mobile to save space) */}
               <div className="hidden lg:block text-center">
                 <p className="text-sm font-bold tracking-wide">
-                  Premium Indian Spices & Agro Exported Worldwide!
+                  Premium Indian Spices & Agro Products Exporting
                 </p>
               </div>
 

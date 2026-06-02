@@ -413,7 +413,7 @@ export default function OMKARAIMPEXFooter() {
 
             {/* Truck 5 Animation */}
             <motion.div
-              className="absolute bottom-2 w-20 sm:w-28 md:w-36 lg:w-44 z-30"
+              className="absolute bottom-0 w-20 sm:w-28 md:w-36 lg:w-44 z-30"
               initial={{ x: "-30%" }}
               animate={{ x: "120vw" }}
               transition={{
@@ -428,7 +428,7 @@ export default function OMKARAIMPEXFooter() {
 
             {/* Truck 6 Animation */}
             <motion.div
-              className="absolute bottom-2 w-20 sm:w-28 md:w-36 lg:w-44 z-30"
+              className="absolute bottom-0 w-20 sm:w-28 md:w-36 lg:w-44 z-30"
               initial={{ x: "120vw" }}
               animate={{ x: "-30%" }}
               transition={{

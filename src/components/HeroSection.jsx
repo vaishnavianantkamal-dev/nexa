@@ -119,15 +119,19 @@ export default function HeroSection() {
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs sm:justify-start sm:text-sm text-slate-200/80">
                   <div className="flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                    Cold-chain maintained
+                    Premium Quality & Purity
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                    Global quality standards
+                    Global Quality Standards
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                    On-time delivery
+                    Customised Solutions
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                    Supply Chain Solutions
                   </div>
                 </div>
               </div>

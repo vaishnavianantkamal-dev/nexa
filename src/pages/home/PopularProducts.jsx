@@ -6,72 +6,59 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Onion from "../../assets/ocenProduct/Onion.png";
 import Rice from "../../assets/ocenProduct/Rice.png";
 import Tea from "../../assets/ocenProduct/Tea.jpeg";
 import Coconut from "../../assets/ocenProduct/Coconut.png";
 import Cumin from "../../assets/ocenProduct/Cumin.png";
 import Turmeric from "../../assets/ocenProduct/Turmeric.png";
-import Potato from "../../assets/ocenProduct/Potato.png";
 import Coffee from "../../assets/ocenProduct/Coffee.png";
 import ProductCategoryCard from "../../components/ProductCategoryCard";
 
+// NOTE: Images for Red Chili, Moringa Powder, Ashwagandha Powder, Pure Cow Ghee
+// and Green Spirulina are not yet available — existing images are used as
+// temporary placeholders until the real product images are added.
 const PRODUCTS = [
   {
     id: 1,
-    name: "Tea",
-    image: Tea,
+    name: "Red Chili (Whole / Powder / Flakes)",
+    image: Turmeric,
     backgroundColor: "#f5f5f5",
-    link: "/products/beverages/tea",
+    link: "/products/spices/red-chili",
   },
   {
     id: 2,
+    name: "Moringa Powder",
+    image: Cumin,
+    backgroundColor: "#f5f5f5",
+    link: "/products/spices/moringa-powder",
+  },
+  {
+    id: 3,
+    name: "Ashwagandha Powder",
+    image: Coffee,
+    backgroundColor: "#f5f5f5",
+    link: "/products/spices/ashwagandha-powder",
+  },
+  {
+    id: 4,
+    name: "Pure Cow Ghee",
+    image: Coconut,
+    backgroundColor: "#f5f5f5",
+    link: "/products/dairy/cow-ghee",
+  },
+  {
+    id: 5,
+    name: "Green Spirulina",
+    image: Tea,
+    backgroundColor: "#f5f5f5",
+    link: "/products/superfoods/green-spirulina",
+  },
+  {
+    id: 6,
     name: "Rice",
     image: Rice,
     backgroundColor: "#f5f5f5",
     link: "/products/grains-and-cereal/rice",
-  },
-  {
-    id: 3,
-    name: "Coconut",
-    image: Coconut,
-    backgroundColor: "#f5f5f5",
-    link: "/products/fruits/coconut",
-  },
-  {
-    id: 4,
-    name: "Cumin",
-    image: Cumin,
-    backgroundColor: "#f5f5f5",
-    link: "/products/spices/cumin",
-  },
-  {
-    id: 5,
-    name: "Turmeric",
-    image: Turmeric,
-    backgroundColor: "#f5f5f5",
-    link: "/products/spices/turmeric",
-  },
-  {
-    id: 6,
-    name: "Onion",
-    image: Onion,
-    backgroundColor: "#f5f5f5",
-    link: "/products/vegetables/onion",
-  },
-  {
-    id: 7,
-    name: "Potato",
-    image: Potato,
-    backgroundColor: "#f5f5f5",
-    link: "/products/vegetables/potato",
-  },
-  {
-    id: 8,
-    name: "Coffee",
-    image: Coffee,
-    backgroundColor: "#f5f5f5",
-    link: "/products/beverages/coffee",
   },
 ];
 
@@ -118,7 +105,7 @@ export default function PopularProductsGrid() {
       >
         <div className="mb-15 gap-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 text-center">
-            Popular <span className="text-[#01BDD8]">Products</span>
+            Popular <span className="text-green-500">Products</span>
           </h2>
         </div>
 
@@ -408,7 +395,7 @@ export default function PopularProductsGrid() {
 //       >
 //         <div className="mb-15 gap-4">
 //           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 text-center">
-//             Popular <span className="text-[#01BDD8]">Products</span>
+//             Popular <span className="text-green-500">Products</span>
 //           </h2>
 //         </div>
 

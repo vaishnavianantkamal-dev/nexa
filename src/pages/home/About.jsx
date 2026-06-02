@@ -77,7 +77,7 @@ export default function OMKARAIMPEXComponent() {
         >
           <div className="inline-flex w-fit items-center gap-2 rounded-full bg-[#C6D869]/30 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-[#5e7a17]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#7a9a1f]" />
-            About Oceanmark Exim
+            About Nexaports Global
           </div>
 
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900">
@@ -103,7 +103,7 @@ export default function OMKARAIMPEXComponent() {
                 </p>
               </div>
               <div className="shrink-0 rounded-full bg-[#C6D869] px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
-                Since 2026
+                Since 2025
               </div>
             </div>
           </div>

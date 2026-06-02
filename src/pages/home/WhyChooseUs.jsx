@@ -83,9 +83,7 @@ export default function WhyChooseUs() {
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-5 tracking-tight">
-            <span className="bg-linear-to-r from-[#F5B921] to-[#C6D869] bg-clip-text text-transparent">
-              {heading}
-            </span>
+            <span className="text-green-500">{heading}</span>
           </h1>
 
           <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto mb-8 leading-relaxed">

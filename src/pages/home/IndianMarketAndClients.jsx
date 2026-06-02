@@ -5,9 +5,9 @@ import { useProductStrengthData } from "../../hooks/useApi";
 // Card Component
 const MarketCard = ({ card }) => {
   return (
-    <div className="relative w-80 shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all">
+    <div className="group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border-4 border-[#C6D869]/60 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C6D869] hover:shadow-xl hover:shadow-[#C6D869]/20">
       <div className="mb-4 flex items-start gap-3">
-        <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#00BED7] to-[#C6D869] shadow-md">
+        <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#C6D869]/20 ring-1 ring-[#C6D869]/40">
           {card.image ? (
             <img
               src={card.image}
@@ -16,7 +16,7 @@ const MarketCard = ({ card }) => {
               loading="lazy"
             />
           ) : (
-            <CheckCircle2 className="h-6 w-6 text-white" strokeWidth={2} />
+            <CheckCircle2 className="h-6 w-6 text-[#5e7a17]" strokeWidth={2} />
           )}
         </div>
         <h3 className="flex-1 text-lg font-bold text-slate-900">
@@ -36,10 +36,6 @@ export default function IndianMarketAndClients() {
 
   const cards = marketData?.cards || [];
 
-  // Split cards into two rows
-  const firstRow = cards.slice(0, Math.ceil(cards.length / 2));
-  const secondRow = cards.slice(Math.ceil(cards.length / 2));
-
   return (
     <div className="w-full bg-linear-to-b from-slate-50 via-white to-slate-50 overflow-hidden py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,9 +48,7 @@ export default function IndianMarketAndClients() {
 
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             {marketData?.heading || "Why the Indian market is"}{" "}
-            <span className="bg-linear-to-r from-[#00BED7] to-[#C6D869] bg-clip-text text-transparent">
-              Best?
-            </span>
+            <span className="text-green-500">Best?</span>
           </h2>
 
           <div className="h-1.5 w-32 bg-linear-to-r from-[#00BED7] to-[#C6D869] rounded-full mx-auto mb-6" />
@@ -66,78 +60,19 @@ export default function IndianMarketAndClients() {
           </p>
         </div>
 
-        {/* Marquee Cards */}
+        {/* Static Cards Grid */}
         {loading ? (
           <div className="flex items-center justify-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00BED7]"></div>
           </div>
         ) : (
-          <div className="relative">
-            {/* First Row - Left to Right */}
-            <div className="marquee-container group mb-6">
-              <div className="marquee-content">
-                {[...firstRow, ...firstRow].map((card, index) => (
-                  <MarketCard key={`row1-${card.id}-${index}`} card={card} />
-                ))}
-              </div>
-            </div>
-
-            {/* Second Row - Right to Left */}
-            <div className="marquee-container marquee-reverse group">
-              <div className="marquee-content">
-                {[...secondRow, ...secondRow].map((card, index) => (
-                  <MarketCard key={`row2-${card.id}-${index}`} card={card} />
-                ))}
-              </div>
-            </div>
-
-            {/* linear Overlays */}
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r from-white to-transparent z-10"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-white to-transparent z-10"></div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {cards.map((card, index) => (
+              <MarketCard key={`card-${card.id}-${index}`} card={card} />
+            ))}
           </div>
         )}
       </div>
-
-      <style>{`
-        .marquee-container {
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-        }
-
-        .marquee-content {
-          display: flex;
-          gap: 1.5rem;
-          animation: scroll-left 40s linear infinite;
-          width: fit-content;
-        }
-
-        .marquee-reverse .marquee-content {
-          animation: scroll-right 40s linear infinite;
-        }
-
-        .marquee-container:hover .marquee-content {
-          animation-play-state: paused;
-        }
-
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @keyframes scroll-right {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </div>
   );
 }

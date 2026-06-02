@@ -152,7 +152,7 @@ export default function Testimonials() {
         transition={{ duration: 0.6 }}
         className="relative z-10 text-center"
       >
-        <h3 className="font-script text-3xl sm:text-4xl text-[#F5B921]">
+        <h3 className="font-poppins text-3xl sm:text-4xl text-[#F5B921]">
           Client Review
         </h3>
         <h2 className="text-stroke-dark mt-1 text-4xl sm:text-6xl font-extrabold uppercase tracking-[0.15em]">
